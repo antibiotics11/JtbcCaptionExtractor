@@ -1,21 +1,22 @@
 {
+
 	"manifest_version": 3,
 	"name": "JTBC Caption Extractor",
-	"version": "0.2",
+	"version": "0.3",
 	"description": "JTBC 자막 추출기",
 
 	"action": {
-		"default_title": "room9stone.com",
-		"default_icon": "r9s_tp_logo.png",
-		"default_popup": "main.html"
+		"default_icon": "assets/r9s_tp_logo.png",
+		"default_popup": "ui/popup.html"
 	},
 
 	"content_scripts": [{
 		"all_frames": true,
 		"matches": [ "*://tv.jtbc.co.kr/replay/*" ],
 		"run_at": "document_start",
-		"js": [ "extract.js" ]
+		"js": [ "src/extract.js" ]
 	}],
 
 	"permissions": [ "storage" ]
+
 }
